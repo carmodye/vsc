@@ -1,0 +1,254 @@
+/*
+Copyright 2011-2020 Abierto Networks, LLC.
+All rights reserved.
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 1920px;
+    height: 1080px;
+    background-color: #666;
+    background-repeat: no-repeat;
+}
+
+#apptimer {
+    width: 1920px;
+    height: 1080px;
+    position: absolute;
+    z-index: 1000;
+}
+
+.ui-dialog {
+    z-index: 2000!important;
+}
+
+#apptimer.bg1 {
+    background-image: url('../back/images/bg1.jpg');
+}
+
+#apptimer.bg2 {
+    background-image: url('../back/images/bg2.jpg');
+}
+
+#apptimer div {
+    height: 115px;
+    width: 330px;
+    top: 750px;
+    margin-left: 820px;
+    position: relative;
+    background-color: #fff;
+    border: 3px solid #000;
+    font-family: Arial;
+    font-size: 110px;
+    line-height: 115px;
+    text-align: center;
+}
+
+#content {
+    position: relative;
+    overflow: hidden;
+    width: 1920px;
+    height: 1080px;
+}
+
+#home-page,
+.home-page {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+video {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.screen,
+.page,
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: none;
+}
+
+.abs {
+    position: absolute;
+}
+
+.rel {
+    position: relative;
+}
+
+#debug {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1600px;
+    height: 800px;
+    color: black;
+    background-color: white;;
+}
+
+/* NEXT GEN APPS */
+.loader {
+    position: absolute;
+    top: 36vh;
+    left: 10vw;
+    color: white;
+    font-weight: bold;
+    font-size: 100px;
+}
+
+#pages-content {
+    position: absolute;
+    overflow: hidden;
+    width: 1920px;
+    height: 1080px;
+    top: 0px;
+}
+
+#players video {
+    width: 1920px;
+    height: 1080px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    object-fit: fill;
+    z-index: -1000;
+}
+
+.innerslideshow {
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1000;
+}
+
+.slide-images {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    visibility: hidden;
+    z-index: -1000;
+}
+
+.slide-images.pan {
+    transform: translateX(924px) scale3d(1.2,1.2,1);
+    transform-origin: center;
+}
+
+.slide-images.pan.animate {
+    transition: all 12s linear;
+    transform: translateX(200px) scale3d(1.2,1.2,1);
+}
+
+.slide-images.zoom {
+    transform: translateX(600px) scale3d(2,2,1);
+    transform-origin: center;
+}
+
+.slide-images.zoom.animate {
+    transition: all 11s linear;
+    transform: translateX(600px) scale3d(1,1,1);
+}
+
+/* styles for playlist controls */
+.playlist-controls {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 1920px;
+    height: 1080px;
+}
+
+.controls-open {
+    background: url(../back/images/playlist_controls_open.png) no-repeat;
+    height: 35px;
+    width: 64px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -32px;
+}
+.controls-popout {
+    background: url(../back/images/playlist_controls_popout.png) no-repeat;
+    width: 374px;
+    height: 143px;
+    position: absolute;
+    margin-left: -187px;
+    bottom: -143px;
+    left: 50%;
+    -webkit-transition-property: bottom;
+    -webkit-transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease;
+    transition-property: bottom;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+.controls-popout.slideup {
+    bottom: 0;
+    -webkit-transition-property: bottom;
+    -webkit-transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease;
+    transition-property: bottom;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+.controls-popout ul {
+    list-style-type: none;
+    height: 97px;
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+}
+.controls-popout li {
+    float: left;
+    height: 100%;
+    margin-left: 20px;
+}
+.controls-popout button {
+    width: 96px;
+    height: 96px;
+    border: none;
+    cursor: pointer;
+    margin: auto 0;
+}
+.controls-popout button.playpause {
+    background: url(../back/images/playlist_controls_play.png) no-repeat;
+}
+.controls-popout button.playpause.pause {
+    background: url(../back/images/playlist_controls_pause.png) no-repeat;
+}
+.controls-popout button.next {
+    background: url(../back/images/playlist_controls_next.png) no-repeat;
+}
+.controls-popout button.prev {
+    background: url(../back/images/playlist_controls_previous.png) no-repeat;
+}
+.controls-popout button.close {
+    background: url(../back/images/playlist_controls_close.png) no-repeat;
+    position: absolute;
+    height: 27px;
+    width: 28px;
+    top: 5px;
+    right: 5px;
+}

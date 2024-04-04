@@ -1,0 +1,1 @@
+var DEVICE_ID = '';

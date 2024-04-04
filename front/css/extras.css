@@ -1,0 +1,200 @@
+/*
+ * Copyright 2011-2022 Abierto Networks, LLC.
+ * All rights reserved.
+ */
+
+/*
+Sheetz enables periodically two extra features:
+- an extra page under the My Store section, normally SFTK (Sheetz For The Kids)
+- an extra slide on the home page, normaly SheetzFest
+
+We're separating the CSS for these here since hopefully the only changes needed
+when one of these is enabled are CSS changes.
+*/
+@font-face {
+    font-family: 'BebasNeue-Regular';
+    src: url('BebasNeue-Regular.otf') format('opentype');
+}
+@font-face {
+    font-family: 'LuckyLady';
+    src: url('LuckyLady.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Obviously-Bold';
+    src: url('Obviously-Bold.otf') format('opentype');
+}
+
+/*
+SFTK, aka Sheetz for the Kids, this is an extra page in the My Store section
+*/
+#notice-extra {
+    background-image: url(../img/notice_extra.jpg);
+    font-family: 'LuckyLady', sans-serif;
+    color: #000;
+    font-size: 22pt;
+}
+#extra-store,
+#extra-corp,
+#extra-1,
+#extra-2,
+#extra-3,
+#extra-4,
+#extra-5 {
+    position: absolute;
+    width: 100%;
+}
+#extra-store { top: 365px; left: 800px; width: 282px; text-align: center; font-family: 'Obviously-Bold'; }
+#extra-corp { top: 365px; left: 370px; font-family: 'Obviously-Bold'; }
+#extra-1 { top: 480px; left: 560px; font-family: 'Obviously-Bold'; }
+#extra-2 { top: 515px; left: 560px; font-family: 'Obviously-Bold'; }
+#extra-3 { top: 550px; left: 560px; font-family: 'Obviously-Bold'; }
+#extra-4 { top: 585px; left: 560px; font-family: 'Obviously-Bold'; }
+#extra-5 { top: 620px; left: 560px; font-family: 'Obviously-Bold'; }
+
+.large #notice-extra {
+    background-image: url(../img/notice_extra_large.jpg);
+    font-size: 32pt;
+}
+.large #extra-store { top: 510px; left: 1120px; width: 415px; text-align: center; font-family: 'Obviously-Bold'; }
+.large #extra-corp { top: 510px; left: 520px; font-family: 'Obviously-Bold'; }
+.large #extra-1 { top: 690px; left: 800px; font-family: 'Obviously-Bold'; }
+.large #extra-2 { top: 740px; left: 800px; font-family: 'Obviously-Bold'; }
+.large #extra-3 { top: 790px; left: 800px; font-family: 'Obviously-Bold'; }
+.large #extra-4 { top: 840px; left: 800px; font-family: 'Obviously-Bold'; }
+.large #extra-5 { top: 890px; left: 800px; font-family: 'Obviously-Bold'; }
+
+
+/*
+Sheetz Fest, this is an extra slide on the home page slideshow
+*/
+body #special-sheetz-fest {
+    background-size: cover;
+    background-image: url(../img/special-sheetz-fest.jpg);
+}
+body.large #special-sheetz-fest {
+    background-image: url(../img/special-sheetz-fest_large.jpg);
+}
+
+#special-sheetz-fest #storeno {
+    position: absolute;
+    font-family: 'bellybeans', sans-serif;
+    color: #abac35;
+    text-align: center;
+    font-size: 50pt;
+    width: 120px;
+    left: 1000px;
+    bottom: 72px;
+}
+body.large #special-sheetz-fest #storeno {
+    font-size: 64pt;
+    width: 200px;
+    left: 1390px;
+    bottom: 106px;
+}
+
+#special-sheetz-fest .name {
+    position: absolute;
+    color: black;
+    font-family: 'BebasNeue-Regular', sans-serif;
+    text-align: center;
+    width: 340px;
+}
+#special-sheetz-fest .split-top {
+    font-size: 28pt;
+}
+#special-sheetz-fest .split-bottom {
+    font-size: 20pt;
+}
+body.large #special-sheetz-fest .name {
+    width: 480px;
+}
+body.large #special-sheetz-fest .split-top {
+    font-size: 42pt;
+}
+body.large #special-sheetz-fest .split-bottom {
+    font-size: 30pt;
+}
+
+/*
+This business here is because a list is not good enough...  They want to put the names in different
+places depending on how many names there are (between 1 and 8)
+*/
+#name-1-8 { top: 200px; left: 510px; }
+#name-2-8 { top: 200px; left: 920px; }
+#name-3-8 { top: 300px; left: 510px; }
+#name-4-8 { top: 300px; left: 920px; }
+#name-5-8 { top: 400px; left: 510px; }
+#name-6-8 { top: 400px; left: 920px; }
+#name-7-8 { top: 500px; left: 510px; }
+#name-8-8 { top: 500px; left: 920px; }
+body.large #name-1-8 { top: 300px; left: 750px; }
+body.large #name-2-8 { top: 300px; left: 1300px; }
+body.large #name-3-8 { top: 433px; left: 750px; }
+body.large #name-4-8 { top: 433px; left: 1300px; }
+body.large #name-5-8 { top: 566px; left: 750px; }
+body.large #name-6-8 { top: 566px; left: 1300px; }
+body.large #name-7-8 { top: 700px; left: 750px; }
+body.large #name-8-8 { top: 700px; left: 1300px; }
+
+#name-1-7 { top: 200px; left: 510px; }
+#name-2-7 { top: 200px; left: 920px; }
+#name-3-7 { top: 300px; left: 510px; }
+#name-4-7 { top: 300px; left: 920px; }
+#name-5-7 { top: 400px; left: 510px; }
+#name-6-7 { top: 400px; left: 920px; }
+#name-7-7 { top: 500px; left: 710px; }
+body.large #name-1-7 { top: 300px; left: 750px; }
+body.large #name-2-7 { top: 300px; left: 1300px; }
+body.large #name-3-7 { top: 433px; left: 750px; }
+body.large #name-4-7 { top: 433px; left: 1300px; }
+body.large #name-5-7 { top: 566px; left: 750px; }
+body.large #name-6-7 { top: 566px; left: 1300px; }
+body.large #name-7-7 { top: 700px; left: 1050px; }
+
+#name-1-6 { top: 200px; left: 510px; }
+#name-2-6 { top: 200px; left: 920px; }
+#name-3-6 { top: 345px; left: 510px; }
+#name-4-6 { top: 345px; left: 920px; }
+#name-5-6 { top: 490px; left: 510px; }
+#name-6-6 { top: 490px; left: 920px; }
+body.large #name-1-6 { top: 300px; left: 750px; }
+body.large #name-2-6 { top: 300px; left: 1300px; }
+body.large #name-3-6 { top: 490px; left: 750px; }
+body.large #name-4-6 { top: 490px; left: 1300px; }
+body.large #name-5-6 { top: 680px; left: 750px; }
+body.large #name-6-6 { top: 680px; left: 1300px; }
+
+#name-1-5 { top: 200px; left: 510px; }
+#name-2-5 { top: 200px; left: 920px; }
+#name-3-5 { top: 345px; left: 510px; }
+#name-4-5 { top: 345px; left: 920px; }
+#name-5-5 { top: 490px; left: 710px; }
+body.large #name-1-5 { top: 300px; left: 750px; }
+body.large #name-2-5 { top: 300px; left: 1300px; }
+body.large #name-3-5 { top: 490px; left: 750px; }
+body.large #name-4-5 { top: 490px; left: 1300px; }
+body.large #name-5-5 { top: 680px; left: 1050px; }
+
+#name-1-4 { top: 250px; left: 510px; }
+#name-2-4 { top: 250px; left: 920px; }
+#name-3-4 { top: 400px; left: 510px; }
+#name-4-4 { top: 400px; left: 920px; }
+body.large #name-1-4 { top: 350px; left: 750px; }
+body.large #name-2-4 { top: 350px; left: 1300px; }
+body.large #name-3-4 { top: 550px; left: 750px; }
+body.large #name-4-4 { top: 550px; left: 1300px; }
+
+#name-1-3 { top: 250px; left: 510px; }
+#name-2-3 { top: 250px; left: 920px; }
+#name-3-3 { top: 400px; left: 720px; }
+body.large #name-1-3 { top: 350px; left: 750px; }
+body.large #name-2-3 { top: 350px; left: 1300px; }
+body.large #name-3-3 { top: 550px; left: 1050px; }
+
+#name-1-2 { top: 330px; left: 510px; }
+#name-2-2 { top: 330px; left: 920px; }
+body.large #name-1-2 { top: 450px; left: 750px; }
+body.large #name-2-2 { top: 450px; left: 1300px; }
+
+#name-1-1 { top: 330px; left: 720px; }
+body.large #name-1-1 { top: 450px; left: 1050px; }
